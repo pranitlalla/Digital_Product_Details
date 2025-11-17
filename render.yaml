@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    region: india
+    plan: free
+    numInstances: 1
+    healthCheckPath: /
+    envVars:
+      - key: N8N_PORT
+        value: 5678
+      - key: GENERIC_TIMEZONE
+        value: Asia/Kolkata
+      - key: DB_TYPE
+        value: postgres
+      - key: DB_POSTGRESDB_HOST
+        value: ep-small-fire-a1so1nno-pooler.ap-southeast-1.aws.neon.tech
+      - key: DB_POSTGRESDB_PORT
+        value: "5432"
+      - key: DB_POSTGRESDB_DATABASE
+        value: neondb
+      - key: DB_POSTGRESDB_USER
+        value: neondb_owner
+      - key: DB_POSTGRESDB_PASSWORD
+        value: npg_R50ibEAZIzps
+      - key: N8N_ENCRYPTION_KEY
+        value: pranitlalladigitalproductsgumroaddockerfie
